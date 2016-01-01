@@ -1,0 +1,123 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<div id="layout">
+  <a href="#menu" id="menuLink" class="menu-link"><!-- Hamburger icon --><span></span></a>
+  <div id="menu">
+    <div class="pure-menu">
+      <span class="point" id="my-point">1pt</span>
+      <span class="seat" id="my-seat"></span>
+      <span class="pure-menu-heading">クイズ一覧</span>
+      <ul class="pure-menu-list sidemenu-quiz-part">
+        <span id="menu-item-template" class="hidden">
+          <li class="pure-menu-item li-template"><a href="javascript:void(0);" class="pure-menu-link js-sidemenu-quiz" data-quiz-id='0'></a></li>
+        </span>
+      </ul>
+      <span class="pure-menu-heading">リンク</span>
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="/ranking" class="pure-menu-link">ランキング</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="main">
+    <div class="js-quiz-content">
+      <div class="header">
+        <h1>DeNA<br />スキマ野球</h1>
+        <h2>予想して野球を楽しく</h2>
+      </div>
+      <div class="content">
+        <img id="logo" src="/assets/logo2.png" >
+      </div>
+    </div>
+    <div id="quiz-template">
+      <div class="header">
+        <h1></h1>
+        <h2 class="js-quiz-text"></h2>
+        <h2 class="js-closed-quiz warning hidden">このクイズは回答期限が切れています</h2>
+        <h2 class="js-correct-quiz warning hidden">このクイズは集計が終了しました</h2> 
+      </div>
+      <div class="content">
+        <div class="answers">
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="javascript:void(0);" data-op-id="1"></a>
+            <form class="pure-form">
+              <select class="bet-form">
+                <%- (1..10).each do |i| -%>
+                  <option><%= 10*i %></option>
+                <%- end -%>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="1"></a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="1"></a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="javascript:void(0);" data-op-id="2"></a>
+            <form class="pure-form">
+              <select class="bet-form">
+                <%- (1..10).each do |i| -%>
+                  <option><%= 10*i %></option>
+                <%- end -%>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="2"></a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="2"></a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="javascript:void(0);" data-op-id="3"></a>
+            <form class="pure-form">
+              <select class="bet-form">
+                <%- (1..10).each do |i| -%>
+                  <option><%= 10*i %></option>
+                <%- end -%>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="3"></a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="3"></a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="javascript:void(0);" data-op-id="4"></a>
+            <form class="pure-form">
+              <select class="bet-form">
+                <%- (1..10).each do |i| -%>
+                  <option><%= 10*i %></option>
+                <%- end -%>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="4"></a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="4"></a>
+            </form>
+          </div>
+        </div>
+        <h3>[このクイズのヒント]</h3>
+        <div class="hint">
+        </div>
+      </div>
+    </div>
+    <div class="js-quiz-content-wrapper">
+    </div>
+  </div>
+  <div id="openModal" class="modalDialog">
+    <div><a href="#close" title="Close" class="close">X</a>
+      <h2>ベットしました！</h2>
+      <p>ありがとうございます</p>
+    </div>
+  </div>
+  <div id="openModalErrorOver" class="modalDialog">
+    <div><a href="#close" title="Close" class="close">X</a>
+      <h2>ベットに失敗しました！</h2>
+      <p>ベットが所持ポイントを超過しています</p>
+    </div>
+  </div>
+  <div id="openModalError" class="modalDialog">
+    <div><a href="#close" title="Close" class="close">X</a>
+      <h2>エラー！</h2>
+      <p>原因不明のエラーが発生しました</p>
+    </div>
+  </div>
+  <div id="openModalErrorClosed" class="modalDialog">
+    <div><a href="#close" title="Close" class="close">X</a>
+      <h2>回答時間終了！</h2>
+      <p>ベット可能な時間が終了しました！</p>
+    </div>
+  </div>
+</div>
+
+<div id="chart"></div>
+

@@ -1,0 +1,2 @@
+module GameQuizzesHelper
+end

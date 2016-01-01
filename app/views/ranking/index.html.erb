@@ -1,0 +1,27 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 user-scalable=no"/>
+<div class="header">
+	<h1>ランキング</h1>
+	<h2></h2>
+</div>
+<div class="content">
+	<table class='pure-table pure-table-bordered ranking-table'>
+		<thead>
+			<tr>
+				<th>順位</th>
+				<th>席番号</th>
+				<th>ポイント</th>
+			</tr>
+		</thead>
+		<tbody>
+		<%- @ranking_users.each_with_index do |user, index| -%>
+			<tr>
+				<td><%= index + 1 %>位</td>
+				<td><%= user.seat %></td>
+				<td><%= user.point %>pt</td>
+			</tr>
+		<%- end -%>
+		</tbody>
+	</table>
+	<a href="/" class="pure-button">戻る</a>
+</div>
+

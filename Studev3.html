@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://localhost:3000/?#close -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Studev3</title>
+  <link rel="stylesheet" media="all" href="http://localhost:3000/assets/main/pure-min-785984433f9d428a4fa56d6fa02cae71.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/main/bets-6e144842dfc112b55e4455d4d0d5db2b.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/main/game_quizzes-6e144842dfc112b55e4455d4d0d5db2b.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/main/games-6e144842dfc112b55e4455d4d0d5db2b.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/main/main-1a77046d340b2b83cf18cebc6770be21.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/main/players-6e144842dfc112b55e4455d4d0d5db2b.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/main/pure-custom-e44b6d244e86abff004ef5323a829b67.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/main/side-menu-430979d828ca9dc9da5d6cd90f6b5e15.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/main/users-6e144842dfc112b55e4455d4d0d5db2b.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/application-d6c6239e3bcdebb6b80c7fb9d8d5831e.css?body=1">
+  <script src="./Studev3_files/jquery-2ebc4d7dee7ed5002a2ec81cda5c42ea.js"></script>
+<script src="./Studev3_files/jquery_ujs-efcd99fdaa88344bc64c4e9297b45619.js"></script>
+<script src="./Studev3_files/bets-a669128dbe8195a3570b7916f9695283.js"></script>
+<script src="./Studev3_files/game_quizzes-a669128dbe8195a3570b7916f9695283.js"></script>
+<script src="./Studev3_files/games-a669128dbe8195a3570b7916f9695283.js"></script>
+<script src="./Studev3_files/main-108c4d3fca0d349c731cb0b381aa9ad6.js"></script>
+<script src="./Studev3_files/players-a669128dbe8195a3570b7916f9695283.js"></script>
+<script src="./Studev3_files/ui-788928c4dc1f0f4bf5b6fa97567d0e22.js"></script>
+<script src="./Studev3_files/users-a669128dbe8195a3570b7916f9695283.js"></script>
+<script src="./Studev3_files/application-98f2e58e4144ab874dac100ea110cd4b.js"></script>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="xVEIzMHE9x8KtvG2ZKEYZESbZLT/qjBKwB0kJRgN+/e+mR8a4Kx5o3FQH6lmtMv63dGBAQJbCfgFVymx1xMnzA==">
+</head>
+<body>
+
+<div id="layout" class=" active">
+  <a href="http://localhost:3000/?#menu" id="menuLink" class="menu-link active"><!-- Hamburger icon --><span></span></a>
+  <div id="menu" class=" active">
+    <div class="pure-menu">
+      <span class="point" id="my-point">-480pt</span>
+      <span class="pure-menu-heading">クイズ一覧</span>
+      <ul class="pure-menu-list sidemenu-quiz-part">
+        <span id="menu-item-template" class="hidden">
+          <li class="pure-menu-item li-template"><a href="javascript:void(0);" class="pure-menu-link js-sidemenu-quiz" data-quiz-id="0"></a></li>
+        </span>
+      <li class="pure-menu-item"><a href="javascript:void(0);" class="pure-menu-link js-sidemenu-quiz" data-quiz-id="1">勝利チームは！？</a></li><li class="pure-menu-item"><a href="javascript:void(0);" class="pure-menu-link js-sidemenu-quiz" data-quiz-id="2">2回攻撃</a></li><li class="pure-menu-item"><a href="javascript:void(0);" class="pure-menu-link js-sidemenu-quiz" data-quiz-id="3">4回守備</a></li><li class="pure-menu-item"><a href="javascript:void(0);" class="pure-menu-link js-sidemenu-quiz" data-quiz-id="4">6回攻撃</a></li><li class="pure-menu-item"><a href="javascript:void(0);" class="pure-menu-link js-sidemenu-quiz" data-quiz-id="5">ラッキーセブン！</a></li></ul>
+      <span class="pure-menu-heading">リンク</span>
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="http://localhost:3000/ranking" class="pure-menu-link">ランキング</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="main">
+    <div class="js-quiz-content">
+      <div class="header">
+        <h1>DeNAスキマ野球</h1>
+        <h2>予想して野球を楽しく</h2>
+      </div>
+      <div class="content">
+        <img id="logo" src="./Studev3_files/logo2.png">
+      </div>
+    </div>
+    <div id="quiz-template">
+      <div class="header">
+        <h1></h1>
+        <h2></h2>
+      </div>
+      <div class="content">
+        <div class="answers">
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="1"></a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="1"></a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="1"></a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="2"></a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="2"></a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="2"></a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="3"></a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="3"></a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="3"></a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="4"></a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="4"></a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="4"></a>
+            </form>
+          </div>
+        </div>
+        <div class="hint">
+        </div>
+      </div>
+    </div>
+    <div class="js-quiz-content-wrapper">
+    <div id="quiz1" class="js-quiz-content hidden">
+      <div class="header">
+        <h1>勝利チームは！？</h1>
+        <h2>今日の試合はベイスターズが……</h2>
+      </div>
+      <div class="content">
+        <div class="answers">
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="1">1点差で勝つ！</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="1">50pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="1">3.3333333333333335倍</a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="2">2～3点差で勝つ！！</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="2">50pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="2">3.3333333333333335倍</a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="3">4点差以上で勝つ！！！！</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="3">0pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="3">5倍</a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="4">負ける……</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="4">0pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="4">5倍</a>
+            </form>
+          </div>
+        </div>
+        <div class="hint">対ヤクルト戦の勝率.557 ハマスタでの勝率.612</div>
+      </div>
+    </div><div id="quiz2" class="js-quiz-content hidden">
+      <div class="header">
+        <h1>2回攻撃</h1>
+        <h2>ベイスターズの攻撃は……</h2>
+      </div>
+      <div class="content">
+        <div class="answers">
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="1">1点取った！！</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="1">110pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="1">3.857142857142857倍</a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="2">2点取った！</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="2">60pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="2">5.0625倍</a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="3">3得点以上！！！</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="3">190pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="3">2.793103448275862倍</a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="4">無得点……</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="4">50pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="4">5.4倍</a>
+            </form>
+          </div>
+        </div>
+        <div class="hint"></div>
+      </div>
+    </div><div id="quiz3" class="js-quiz-content hidden">
+      <div class="header">
+        <h1>4回守備</h1>
+        <h2>ピッチャー，この回は……</h2>
+      </div>
+      <div class="content">
+        <div class="answers">
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="1">ランナーを出すも無得点！</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="1">0pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="1">8.7倍</a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="2">三者凡退！！</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="2">220pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="2">2.71875倍</a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="3">三者三振！！！</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="3">200pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="3">2.9倍</a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="4">痛恨の失点……</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="4">50pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="4">5.8倍</a>
+            </form>
+          </div>
+        </div>
+        <div class="hint">xx投手対ヤクルト戦1.57</div>
+      </div>
+    </div><div id="quiz4" class="js-quiz-content hidden">
+      <div class="header">
+        <h1>6回攻撃</h1>
+        <h2>この回打者は……</h2>
+      </div>
+      <div class="content">
+        <div class="answers">
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="1">ヒット1本</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="1">150pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="1">3.4倍</a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="2">ヒット2本以上！</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="2">100pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="2">4.25倍</a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="3">ホームランを打つ！！！</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="3">200pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="3">2.8333333333333335倍</a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="4">三者凡退……</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="4">0pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="4">8.5倍</a>
+            </form>
+          </div>
+        </div>
+        <div class="hint">このスタメンの平均打率.286</div>
+      </div>
+    </div><div id="quiz5" class="js-quiz-content hidden">
+      <div class="header">
+        <h1>ラッキーセブン！</h1>
+        <h2>この回，ベイスターズは……</h2>
+      </div>
+      <div class="content">
+        <div class="answers">
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="1">1点取った！！</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="1">0pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="1">2倍</a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="2">2点取った！</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="2">50pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="2">1倍</a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="3">3得点以上！！！</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="3">0pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="3">2倍</a>
+            </form>
+          </div>
+          <div class="answer-btn-wrapper">
+            <a class="button-secondary pure-button answer-btn" href="http://localhost:3000/?#openModal" data-op-id="4">無得点……</a>
+            <form class="pure-form">
+              <select class="bet-form">
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+              </select>
+              <a href="javascript:void(0);" class="pure-button point-field" data-op-id="4">0pt</a>
+              <a href="javascript:void(0);" class="pure-button rate-btn" data-op-id="4">2倍</a>
+            </form>
+          </div>
+        </div>
+        <div class="hint">今季のラッキーセブン得点率は.452</div>
+      </div>
+    </div></div>
+  </div>
+  <div id="openModal" class="modalDialog">
+    <div><a href="./Studev3_files/Studev3.html" title="Close" class="close">X</a>
+      <h2>ベットしました！</h2>
+      <p>ありがとうございます</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+</body></html>
