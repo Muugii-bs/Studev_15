@@ -1,28 +1,21 @@
-== README
+# 横浜BayStars特有のウェッブアプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### 概要
+DeNAサマーインターン2015に参加するためのプロジェクトです。本アプリのミッションは、横浜BayStarsを応援する、グッズ売り上げをアップさせることです。コンセプトは、BayStarsの試合中にユーザにクイズを与え、当たったらグッズやポイントがもらえる。例えば、バッターが打つ前にホムラーンを打てるかどうか、何点取れるかなどのクイズを出し当たればグッズなどがもらえる。
 
-Things you may want to cover:
+### 主な機能
+1. ユーザ登録、ログイン、ログアウト
+2. 試合中に適切な瞬間に適切なクイズを抽出
+3. 抽出したクイズを配信し、結果を集計
+4. ユーザごとのランキングを計算
+5. クイズの集計結果、選択肢の倍率などをリアルタイムで配信
 
-* Ruby version
+### 用途、利用者
+利用者は、横浜BayStarsのファンまたはBayStarsの試合を見に行く視聴者です。
 
-* System dependencies
+### 用いた技術
+1. Ruby on Rails 4.2.0
+2. SQLITE
+3. Pure CSS
+4. JQuery
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...///
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
